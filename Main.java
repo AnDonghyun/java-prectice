@@ -1,13 +1,19 @@
 public class Main {
     public static void main(String[] args) {
-        try {
-            args = null;
-            args[0] = "test";
-            System.out.println(args[0]);
-        } catch (Exception ex) {
-            System.out.println("Exception");
-        } catch (NullPointerException npe) {
-            System.out.println("NullPointerException");
+        String o = "";
+        z:
+        for(int x = 0; x < 3; x++) {
+            for(int y = 0; y < 2; y++) {
+                if(x==1) break;
+                if(x==2 && y==1) break z;
+                o = o + x + y;
+            }
         }
+        System.out.println(o);
+        
+        String t = "";
+        int i = 1;
+        t = t + i;
+        System.out.println(t);
     }
 }
